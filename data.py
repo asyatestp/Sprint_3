@@ -6,7 +6,7 @@ class Data:
 
     USER_NAME = Faker().name()
     USER_EMAIL = Faker().email()
-    USER_PASSWORD = random.randrange(1000000, 10000000)
+    USER_PASSWORD = random.randrange(100000, 10000000)
 
     user_name = 'Asya'
     user_email = 'asya_efimova_11@yandex.ru'
