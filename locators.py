@@ -26,6 +26,8 @@ class Locators:
     ENTER_BUTTON_REC = (By.CSS_SELECTOR, ".Auth_link__1fOlj")  # Кнопка "Войти"
     RECOVERY_BUTTON = (By.XPATH, ".//button[text()='Восстановить']") # Кнопка "Восстановить"
     # Страница с личным кабинетом /account/profile
+
     CONSTRUCTOR_BUTTON = (By.XPATH, ".//p[text()='Конструктор']")  # Кнопка "Конструктор"
-    LOGO_BUTTON = (By.XPATH, ".//div[contains(@class,'2D0X2')]/a")  # Кнопка логотипа
+    LOGO_BUTTON = (By.CSS_SELECTOR, ".AppHeader_header__logo__2D0X2")  # Кнопка логотипа
     LOGOUT_BUTTON = (By.XPATH, ".//button[text()='Выход']")  # Кнопка "Выход"
+    SAVE_BUTTON = (By.XPATH, ".//button[text()='Сохранить']")  # Кнопка "Сохранить"
