@@ -6,10 +6,11 @@ class Locators:
     LK_BUTTON = (By.XPATH, ".//p[text()='Личный Кабинет']")  # Кнопка "Личный кабинет"
     PUSH_ORDER = (By.XPATH, ".//button[text()='Оформить заказ']")  # Кнопка "Оформить заказ"
     SOUCE_BUTTON = (By.XPATH, ".//span[text()='Соусы']")  # Кнопка "Соусы"
-    STUFFING_BUTTON = (By.XPATH, ".//span[text()='Начинки']")  # Кнопка "Начинки"
-    AREA_BAKERY = (By.XPATH, ".//div[contains(@class,'current')]/span[text()='Булки']")  # Раздел с булками
-    AREA_SOUCE = (By.XPATH, ".//div[contains(@class,'current')]/span[text()='Соусы']")  # Раздел с соусами
-    AREA_STUFFING = (By.XPATH, ".//div[contains(@class,'current')]/span[text()='Начинки']")  # Раздел с начинками
+    TOPPING_BUTTON = (By.XPATH, ".//span[text()='Начинки']")  # Кнопка "Начинки"
+    ROLL_BAKERY = (By.XPATH, ".//*[contains(text(),'Булки')]") # Кнопка "Булки"
+    DIV_BAKERY = (By.XPATH, ".//div[contains(@class,'current')]/span[text()='Булки']")  # Раздел с булками
+    DIV_SOUCE = (By.XPATH, ".//div[contains(@class,'current')]/span[text()='Соусы']")  # Раздел с соусами
+    DIV_TOPPING = (By.XPATH, ".//div[contains(@class,'current')]/span[text()='Начинки']")  # Раздел с начинками
     # Страница с формой авторизации /login
     EMAIL = (By.XPATH, ".//input[contains(@type,'text')]")  # Поле "Почта"
     PASSWORD = (By.XPATH, ".//input[contains(@type,'password')]")  # Поле "Пароль"

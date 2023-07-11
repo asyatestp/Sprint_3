@@ -18,6 +18,7 @@ def test_registration(driver):
     driver.find_element(*Locators.REG_PASSWORD).send_keys(Data.USER_PASSWORD)
     driver.find_element(*Locators.REG_BUTTON).click()
     WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.FORM_ENTER))
+
     assert driver.find_element(*Locators.FORM_ENTER).text == 'Вход'
     driver.quit()
 
@@ -34,6 +35,7 @@ def test_registration_incorrect_pass(driver):
     driver.find_element(*Locators.REG_PASSWORD).send_keys(Data.incorrect_pass)
     driver.find_element(*Locators.REG_BUTTON).click()
     WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.INCORRECT_PASS))
+
     assert driver.find_element(*Locators.INCORRECT_PASS).text == 'Некорректный пароль'
     driver.quit()
 
