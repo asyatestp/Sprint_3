@@ -2,6 +2,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from locators import Locators
 from data import Data
+from urls import Urls
 
 
 def test_authorization_lk(driver):
@@ -17,8 +18,8 @@ def test_authorization_lk(driver):
     WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.PUSH_ORDER))
     driver.find_element(*Locators.LK_BUTTON).click()
 
-    assert driver.current_url == 'https://stellarburgers.nomoreparties.site/account/profile'
-    driver.quit()
+    assert  driver.find_element(*Locators.SAVE_BUTTON).text == 'Сохранить'
+
 
 
 def test_transition_to_the_constructor(driver):
@@ -36,8 +37,8 @@ def test_transition_to_the_constructor(driver):
     WebDriverWait(driver, 10).until(EC.element_to_be_clickable(Locators.SAVE_BUTTON))
     driver.find_element(*Locators.CONSTRUCTOR_BUTTON).click()
 
-    assert driver.current_url == 'https://stellarburgers.nomoreparties.site/'
-    driver.quit()
+    assert driver.current_url == Urls.MAIN
+
 
 
 def test_switching_to_the_logo(driver):
@@ -55,8 +56,8 @@ def test_switching_to_the_logo(driver):
     WebDriverWait(driver, 10).until(EC.element_to_be_clickable(Locators.SAVE_BUTTON))
     driver.find_element(*Locators.LOGO_BUTTON).click()
 
-    assert driver.current_url == 'https://stellarburgers.nomoreparties.site/'
-    driver.quit()
+    assert driver.current_url == Urls.MAIN
+
 
 def test_logout(driver):
 
@@ -74,6 +75,6 @@ def test_logout(driver):
     driver.find_element(*Locators.LOGOUT_BUTTON).click()
     WebDriverWait(driver, 10).until(EC.element_to_be_clickable(Locators.ENTER_BUTTON_A))
 
-    assert driver.current_url == 'https://stellarburgers.nomoreparties.site/login'
-    driver.quit()
+    assert driver.current_url == Urls.LOGIN
+
 

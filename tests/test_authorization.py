@@ -33,7 +33,7 @@ def test_authorization_lk(driver):
     WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.PUSH_ORDER))
 
     assert driver.find_element(*Locators.PUSH_ORDER).text == 'Оформить заказ'
-    driver.quit()
+
 
 def test_authorization_reg(driver):
 
@@ -50,7 +50,7 @@ def test_authorization_reg(driver):
     WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.PUSH_ORDER))
 
     assert driver.find_element(*Locators.PUSH_ORDER).text == 'Оформить заказ'
-    driver.quit()
+
 
 
 def test_authorization_recovery_pass(driver):
@@ -68,4 +68,3 @@ def test_authorization_recovery_pass(driver):
     WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.PUSH_ORDER))
 
     assert driver.find_element(*Locators.PUSH_ORDER).text == 'Оформить заказ'
-    driver.quit()
